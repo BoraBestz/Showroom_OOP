@@ -1,50 +1,72 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Showroom {
-    private String carbrand;
-    private String carname;
-    private Integer price;
+    private String name;
+    private String address;
+    private String phone;
+    private List<Car> cars;
 
     public Showroom() {
-
+        this.name = "BestShowroom";
+        this.address = "528 donmuang bangkok 10210";
+        this.phone = "0899999999";
+        this.cars = new ArrayList<>();
     }
 
-    public Showroom(String carbrand,String carname,Integer price) {
-        this.carbrand = carbrand;
-        this.carname = carname;
-        this.price = price;
+    public Showroom(String name, String address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.cars = new ArrayList<>();
     }
 
-
-    public String getCarbrand() {
-        return this.carbrand;
+    public String getname() {
+        return this.name;
     }
 
-    public void setCarbrand(String carbrand) {
-        this.carbrand = carbrand;
+    public void setname(String name) {
+        this.name = name;
     }
 
-    public String getCarname() {
-        return this.carname;
+    public String getAddress() {
+        return this.address;
     }
 
-    public void setCarname(String carname) {
-        this.carname = carname;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Integer getPrice() {
-        return this.price;
+    public String getphone() {
+        return this.phone;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setphone(String phone) {
+        this.phone = phone;
     }
 
-    public void displayShowroom(){
-        System.out.println("carbrand = " + this.carbrand);
-        System.out.println("carname = " + this.carname);
-        System.out.println("price = " + this.price);
+    public void displayShowroom() {
+        System.out.println("name = " + this.name);
+        System.out.println("address = " + this.address);
+        System.out.println("phone = " + this.phone);
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void displayCars() {
+        String detail = "Car Brand : %s, Model :  %s,  Price : %d";
+        for (int i = 0; i < this.cars.size(); i++) {
+            System.out.println(String.format(detail, this.cars.get(i).getBrand(), this.cars.get(i).getModel(),
+                    this.cars.get(i).getPrice()));
+        }
+    }
+
+    public void addCar(Car... car) {
+        for (int i = 0; i < car.length; i++) {
+            this.cars.add(car[i]);
+        }
+    }
 
 }
-
-
