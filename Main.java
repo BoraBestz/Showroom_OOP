@@ -3,8 +3,18 @@ public class Main {
         Showroom showroom = new Showroom();
         Car mazda2 = new CarDetail("Mazda", "2", 600000.00);
         Car civic = new CarDetail("Honda", "Civic", 1200000.00);
-        showroom.addCar(mazda2, civic);
+        Car accord = new CarDetail("Toyota", "Accord", 1600000.00);
+        showroom.addCar(mazda2, civic, accord);
+        mazda2.testDrive("180", "10", "not good");
+        civic.testDrive("200", "8", "good");
+        accord.testDrive("220", "7", "love it");
 
+
+        showroom.displayShowroom();
         showroom.displayCars();
+
+        mazda2.displayTestdrive();
+        civic.displayTestdrive();
+        accord.displayTestdrive();
     }
 }

@@ -1,4 +1,4 @@
-public class CarDetail extends Car implements Testdrive {
+public class CarDetail extends Car {
 
     public CarDetail(String brand, String model, double price) {
         setBrand(brand);
@@ -6,8 +6,4 @@ public class CarDetail extends Car implements Testdrive {
         setPrice(price);
     }
 
-    @Override
-    public void testDrive() {
-
-    }
 }

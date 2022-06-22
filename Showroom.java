@@ -56,10 +56,10 @@ public class Showroom {
     }
 
     public void displayCars() {
-        String detail = "Car Brand : %s, Model :  %s,  Price : %d";
+        String detail = "Car Brand : %s, Model :  %s,  Price : %s";
         for (int i = 0; i < this.cars.size(); i++) {
             System.out.println(String.format(detail, this.cars.get(i).getBrand(), this.cars.get(i).getModel(),
-                    this.cars.get(i).getPrice()));
+                   String.valueOf(this.cars.get(i).getPrice())));
         }
     }
 
