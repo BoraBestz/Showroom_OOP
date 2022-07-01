@@ -1,7 +1,7 @@
 public abstract class Vehicle {
-    protected String brand;
-    protected String model;
-    protected double price;
+    private String brand;
+    private String model;
+    private double price;
 
     public String getBrand() {
         return this.brand;

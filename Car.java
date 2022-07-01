@@ -1,8 +1,8 @@
 public class Car extends Vehicle implements TestDrive{
 
-    protected String topspeed;
-    protected String acceleration;
-    protected String feeling;
+    private String topspeed;
+    private String acceleration;
+    private String feeling;
 
     public Car(String brand, String model, double price) {
         setBrand(brand);
@@ -43,7 +43,7 @@ public class Car extends Vehicle implements TestDrive{
 
     @Override
     public void displayTestdrive() {
-        System.out.println(this.brand + " " + this.model);
+        System.out.println(super.getBrand() + " " + super.getModel();
         System.out.println("Top Speed: "+ this.getTopspeed() + " kmh");
         System.out.println("Acceleration 0-100kmh: "+ this.getAcceleration() + " sec");
         System.out.println("Feeling: "+ this.getFeeling());
