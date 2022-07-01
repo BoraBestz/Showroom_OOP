@@ -5,7 +5,7 @@ public class Showroom {
     private String name;
     private String address;
     private String phone;
-    private List<Car> cars;
+    private List<Vehicle> cars;
 
     public Showroom() {
         this.name = "BestShowroom";
@@ -51,7 +51,7 @@ public class Showroom {
         System.out.println("phone = " + this.phone);
     }
 
-    public List<Car> getCars() {
+    public List<Vehicle> getCars() {
         return cars;
     }
 
@@ -63,7 +63,7 @@ public class Showroom {
         }
     }
 
-    public void addCar(Car... car) {
+    public void addCar(Vehicle... car) {
         for (int i = 0; i < car.length; i++) {
             this.cars.add(car[i]);
         }

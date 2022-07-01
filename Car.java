@@ -1,36 +1,14 @@
-public abstract class Car implements TestDrive{
-    protected String brand;
-    protected String model;
-    protected double price;
+public class Car extends Vehicle implements TestDrive{
 
     protected String topspeed;
     protected String acceleration;
     protected String feeling;
 
-    public String getBrand() {
-        return this.brand;
+    public Car(String brand, String model, double price) {
+        setBrand(brand);
+        setModel(model);
+        setPrice(price);
     }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return this.model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public double getPrice() {
-        return this.price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
 
     public String getTopspeed() {
         return this.topspeed;
@@ -70,4 +48,5 @@ public abstract class Car implements TestDrive{
         System.out.println("Acceleration 0-100kmh: "+ this.getAcceleration() + " sec");
         System.out.println("Feeling: "+ this.getFeeling());
     }
+
 }
